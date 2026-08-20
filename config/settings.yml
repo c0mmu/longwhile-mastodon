@@ -16,7 +16,7 @@ defaults: &defaults
   show_staff_badge: true
   preview_sensitive_media: false
   noindex: true
-  theme: 'mastodon-bird-ui-light'
+  theme: 'mumyeongjangya-day'
   trends: true
   trends_as_landing_page: true
   trendable_by_default: false
@@ -69,4 +69,3 @@ test:
 
 production:
   <<: *defaults
-
