@@ -1,0 +1,289 @@
+/* Mumyeongjangya theme palette and glass surfaces.
+ * The background asset is intentionally empty. Replace `none` in the selected
+ * theme with url('../images/backgrounds/mumyeongjangya.jpg') when it is ready.
+ */
+
+body.theme-mumyeongjangya-night {
+  color-scheme: dark;
+
+  --mumyeongjangya-page-bg: #0c081e;
+  --mumyeongjangya-background-image: none;
+  --mumyeongjangya-background-overlay: radial-gradient(circle at 18% 8%, rgba(154, 29, 218, 22%), transparent 36%), radial-gradient(circle at 82% 22%, rgba(34, 81, 165, 16%), transparent 32%), linear-gradient(150deg, rgba(12, 8, 30, 96%), rgba(35, 19, 91, 90%));
+  --mumyeongjangya-glass: rgba(20, 12, 43, 76%);
+  --mumyeongjangya-glass-strong: rgba(24, 16, 49, 90%);
+  --mumyeongjangya-glass-fallback: #181031;
+  --mumyeongjangya-glass-border: rgba(169, 120, 255, 28%);
+  --mumyeongjangya-glass-highlight: rgba(247, 243, 255, 7%);
+  --mumyeongjangya-glass-shadow: 0 18px 60px rgba(3, 1, 12, 42%), inset 0 1px 0 rgba(247, 243, 255, 5%);
+  --color-column: rgba(12, 8, 30, 32%);
+  --color-bg: var(--mumyeongjangya-glass);
+  --color-fg: #f7f3ff;
+  --color-dim: #b6a8cc;
+  --color-light-purple: var(--color-dim);
+  --color-lighter-purple: #d2c5e8;
+  --color-topaz: #e8e0f5;
+  --color-light-text: #fbf9ff;
+  --color-light-shade: rgba(167, 120, 255, 12%);
+  --color-dark: rgba(35, 19, 91, 80%);
+  --color-mud: rgba(29, 17, 60, 84%);
+  --color-bg-compose-form: rgba(29, 17, 60, 82%);
+  --color-bg-compose-form-focus: rgba(42, 24, 83, 94%);
+  --color-bg-75: rgba(12, 8, 30, 76%);
+  --color-bg-90: rgba(12, 8, 30, 92%);
+  --color-brand-longwhile: #a778ff;
+  --color-brand-longwhile-dim: #b6a8cc;
+  --color-brand-longwhile-dark: #23135b;
+  --color-brand-longwhile-bg: #0c081e;
+  --color-brand-longwhile-text-light: #d2c5e8;
+  --color-brand-longwhile-links: #5ad9ff;
+  --color-brand-longwhile-threaded-line: rgba(167, 120, 255, 46%);
+  --logo: url('../images/logos/wordmark_dark.png');
+  --m-logo: url('../images/logos/m_logo_dark.png');
+  --color-link: #5ad9ff;
+  --color-accent: #a778ff;
+  --color-accent-dark: #8f54ed;
+  --color-accent-dark-50: rgba(143, 84, 237, 50%);
+  --color-hashtag: #c49cff;
+  --color-mention: #5ad9ff;
+  --color-post-button: #8f54ed;
+  --color-post-button-text: #ffffff;
+  --color-on-brand: #ffffff;
+  --color-button-text: #f7f3ff;
+  --color-button-border: rgba(210, 197, 232, 54%);
+  --color-ghost-button-text: #c49cff;
+  --color-border: var(--mumyeongjangya-glass-border);
+  --color-thread-line: rgba(167, 120, 255, 40%);
+  --color-noti-hover: rgba(167, 120, 255, 12%);
+  --color-icon-button-hover: rgba(196, 156, 255, 12%);
+  --color-profile-button-hover: rgba(167, 120, 255, 14%);
+  --color-focusable-toot: rgba(167, 120, 255, 8%);
+  --color-modal-overlay: rgba(5, 2, 15, 72%);
+  --color-modal-panel: var(--mumyeongjangya-glass-strong);
+  --account-switcher-manage-overlay: var(--color-modal-overlay);
+  --color-column-link: #d2c5e8;
+  --color-column-link-hover: #c49cff;
+  --color-black-coral: #776a91;
+  --color-dark-electric-blue: #8b7ca8;
+  --color-arsenic: #35254f;
+  --color-outer-space: #493862;
+  --color-brand-longwhile-heart: #ff4fd8;
+  --color-brand-longwhile-favourite: #ffd166;
+  --color-green: #28d7c0;
+  --color-red: #ff4fd8;
+  --color-red-75: rgba(255, 79, 216, 75%);
+  --color-yellow: #ffd166;
+  --color-brand-longwhile-danger: #ff4f76;
+  --color-brand-longwhile-danger-hover: #dc365e;
+  --color-destructive: #ff4f76;
+  --color-verified: #5ad9ff;
+  --color-light-fuchsia-pink: #f08cff;
+  --background-color: #0c081e;
+  --background-color-tint: rgba(12, 8, 30, 90%);
+  --background-border-color: var(--color-border);
+  --surface-background-color: var(--mumyeongjangya-glass);
+  --surface-variant-background-color: rgba(35, 19, 91, 78%);
+  --surface-variant-active-background-color: rgba(83, 36, 157, 76%);
+  --dropdown-background-color: var(--mumyeongjangya-glass-strong);
+  --dropdown-border-color: var(--color-border);
+  --modal-background-color: var(--color-modal-overlay);
+  --modal-background-variant-color: var(--mumyeongjangya-glass-strong);
+  --modal-border-color: var(--color-border);
+  --input-background-color: rgba(12, 8, 30, 70%);
+  --input-placeholder-color: #9f91b6;
+  --on-input-color: var(--color-fg);
+  --background-filter: blur(20px) saturate(145%);
+  --active-header-box-shadow: 0 1px 0 rgba(167, 120, 255, 34%);
+  --active-header-radial-gradient: radial-gradient(ellipse, rgba(154, 29, 218, 20%) 0, rgba(154, 29, 218, 0%) 64%);
+  --compose-form-linear-gradient: linear-gradient(180deg, rgba(29, 17, 60, 98%) 0%, rgba(29, 17, 60, 94%) 55%, rgba(29, 17, 60, 58%) 82%, rgba(29, 17, 60, 0%) 100%);
+}
+
+body.theme-mumyeongjangya-day {
+  color-scheme: light;
+
+  --mumyeongjangya-page-bg: #f3eff9;
+  --mumyeongjangya-background-image: none;
+  --mumyeongjangya-background-overlay: radial-gradient(circle at 18% 8%, rgba(151, 100, 213, 18%), transparent 38%), radial-gradient(circle at 82% 18%, rgba(90, 217, 255, 13%), transparent 34%), linear-gradient(150deg, rgba(250, 248, 253, 97%), rgba(232, 224, 245, 94%));
+  --mumyeongjangya-glass: rgba(255, 255, 255, 70%);
+  --mumyeongjangya-glass-strong: rgba(251, 249, 253, 90%);
+  --mumyeongjangya-glass-fallback: #fbf9fd;
+  --mumyeongjangya-glass-border: rgba(83, 36, 157, 18%);
+  --mumyeongjangya-glass-highlight: rgba(255, 255, 255, 72%);
+  --mumyeongjangya-glass-shadow: 0 18px 55px rgba(55, 35, 85, 16%), inset 0 1px 0 rgba(255, 255, 255, 80%);
+  --color-column: rgba(255, 255, 255, 30%);
+  --color-bg: var(--mumyeongjangya-glass);
+  --color-fg: #241b32;
+  --color-dim: #675b78;
+  --color-light-purple: var(--color-dim);
+  --color-lighter-purple: #554668;
+  --color-topaz: #51445f;
+  --color-light-text: #2d233b;
+  --color-light-shade: rgba(106, 63, 195, 8%);
+  --color-dark: rgba(236, 229, 247, 82%);
+  --color-mud: rgba(243, 238, 249, 84%);
+  --color-bg-compose-form: rgba(248, 245, 252, 76%);
+  --color-bg-compose-form-focus: rgba(255, 255, 255, 92%);
+  --color-bg-75: rgba(251, 249, 253, 76%);
+  --color-bg-90: rgba(251, 249, 253, 92%);
+  --color-brand-longwhile: #6a3fc3;
+  --color-brand-longwhile-dim: #675b78;
+  --color-brand-longwhile-dark: #4f2a9d;
+  --color-brand-longwhile-bg: #f3eff9;
+  --color-brand-longwhile-text-light: #554668;
+  --color-brand-longwhile-links: #256a8f;
+  --color-brand-longwhile-threaded-line: rgba(106, 63, 195, 32%);
+  --logo: url('../images/logos/wordmark_light.png');
+  --m-logo: url('../images/logos/m_logo_light.png');
+  --color-link: #256a8f;
+  --color-accent: #6a3fc3;
+  --color-accent-dark: #5b32ad;
+  --color-accent-dark-50: rgba(91, 50, 173, 50%);
+  --color-hashtag: #6a3fc3;
+  --color-mention: #256a8f;
+  --color-post-button: #6a3fc3;
+  --color-post-button-text: #ffffff;
+  --color-on-brand: #ffffff;
+  --color-button-text: #ffffff;
+  --color-button-border: rgba(83, 36, 157, 30%);
+  --color-ghost-button-text: #5b32ad;
+  --color-border: var(--mumyeongjangya-glass-border);
+  --color-thread-line: rgba(106, 63, 195, 28%);
+  --color-noti-hover: rgba(106, 63, 195, 8%);
+  --color-icon-button-hover: rgba(106, 63, 195, 9%);
+  --color-profile-button-hover: rgba(106, 63, 195, 10%);
+  --color-focusable-toot: rgba(106, 63, 195, 6%);
+  --color-modal-overlay: rgba(36, 27, 50, 34%);
+  --color-modal-panel: var(--mumyeongjangya-glass-strong);
+  --account-switcher-manage-overlay: var(--color-modal-overlay);
+  --color-column-link: #4b3d5f;
+  --color-column-link-hover: #6a3fc3;
+  --color-black-coral: #897e98;
+  --color-dark-electric-blue: #796d8b;
+  --color-arsenic: #ddd4e9;
+  --color-outer-space: #d4c9e2;
+  --color-brand-longwhile-heart: #d71f91;
+  --color-brand-longwhile-favourite: #9a6400;
+  --color-green: #087f74;
+  --color-red: #d71f91;
+  --color-red-75: rgba(215, 31, 145, 75%);
+  --color-yellow: #9a6400;
+  --color-brand-longwhile-danger: #c42b51;
+  --color-brand-longwhile-danger-hover: #a71f41;
+  --color-destructive: #c42b51;
+  --color-verified: #256a8f;
+  --color-light-fuchsia-pink: #a33dc2;
+  --background-color: #f3eff9;
+  --background-color-tint: rgba(243, 239, 249, 90%);
+  --background-border-color: var(--color-border);
+  --surface-background-color: var(--mumyeongjangya-glass);
+  --surface-variant-background-color: rgba(239, 232, 247, 82%);
+  --surface-variant-active-background-color: rgba(221, 210, 239, 86%);
+  --dropdown-background-color: var(--mumyeongjangya-glass-strong);
+  --dropdown-border-color: var(--color-border);
+  --modal-background-color: var(--color-modal-overlay);
+  --modal-background-variant-color: var(--mumyeongjangya-glass-strong);
+  --modal-border-color: var(--color-border);
+  --input-background-color: rgba(255, 255, 255, 72%);
+  --input-placeholder-color: #796d8b;
+  --on-input-color: var(--color-fg);
+  --background-filter: blur(20px) saturate(135%);
+  --active-header-box-shadow: 0 1px 0 rgba(106, 63, 195, 22%);
+  --active-header-radial-gradient: radial-gradient(ellipse, rgba(151, 100, 213, 15%) 0, rgba(151, 100, 213, 0%) 64%);
+  --compose-form-linear-gradient: linear-gradient(180deg, rgba(251, 249, 253, 98%) 0%, rgba(251, 249, 253, 94%) 55%, rgba(251, 249, 253, 58%) 82%, rgba(251, 249, 253, 0%) 100%);
+}
+
+body.theme-mumyeongjangya-day,
+body.theme-mumyeongjangya-night {
+  background: transparent !important;
+  isolation: isolate;
+  min-height: 100%;
+  position: relative;
+}
+
+body.theme-mumyeongjangya-day::before,
+body.theme-mumyeongjangya-night::before {
+  background-color: var(--mumyeongjangya-page-bg);
+  background-image: var(--mumyeongjangya-background-overlay), var(--mumyeongjangya-background-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: '';
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+}
+
+body.theme-mumyeongjangya-day .columns-area__panels__pane__inner,
+body.theme-mumyeongjangya-night .columns-area__panels__pane__inner,
+body.theme-mumyeongjangya-day .column > .scrollable,
+body.theme-mumyeongjangya-night .column > .scrollable,
+body.theme-mumyeongjangya-day .drawer__inner,
+body.theme-mumyeongjangya-night .drawer__inner,
+body.theme-mumyeongjangya-day .column-header,
+body.theme-mumyeongjangya-night .column-header,
+body.theme-mumyeongjangya-day .tabs-bar__wrapper,
+body.theme-mumyeongjangya-night .tabs-bar__wrapper,
+body.theme-mumyeongjangya-day .ui__header,
+body.theme-mumyeongjangya-night .ui__header {
+  -webkit-backdrop-filter: blur(20px) saturate(145%);
+  backdrop-filter: blur(20px) saturate(145%);
+  background-color: var(--mumyeongjangya-glass);
+  border-color: var(--mumyeongjangya-glass-border);
+}
+
+body.theme-mumyeongjangya-day .column > .scrollable,
+body.theme-mumyeongjangya-night .column > .scrollable,
+body.theme-mumyeongjangya-day .drawer__inner,
+body.theme-mumyeongjangya-night .drawer__inner,
+body.theme-mumyeongjangya-day .columns-area__panels__pane__inner,
+body.theme-mumyeongjangya-night .columns-area__panels__pane__inner {
+  box-shadow: var(--mumyeongjangya-glass-shadow);
+}
+
+body.theme-mumyeongjangya-day .dropdown-menu,
+body.theme-mumyeongjangya-night .dropdown-menu,
+body.theme-mumyeongjangya-day .modal-root__modal,
+body.theme-mumyeongjangya-night .modal-root__modal,
+body.theme-mumyeongjangya-day .search-popout,
+body.theme-mumyeongjangya-night .search-popout,
+body.theme-mumyeongjangya-day .search__popout,
+body.theme-mumyeongjangya-night .search__popout {
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  backdrop-filter: blur(24px) saturate(150%);
+  background-color: var(--mumyeongjangya-glass-strong);
+  border: 1px solid var(--mumyeongjangya-glass-border);
+  box-shadow: var(--mumyeongjangya-glass-shadow);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  body.theme-mumyeongjangya-day .columns-area__panels__pane__inner,
+  body.theme-mumyeongjangya-night .columns-area__panels__pane__inner,
+  body.theme-mumyeongjangya-day .column > .scrollable,
+  body.theme-mumyeongjangya-night .column > .scrollable,
+  body.theme-mumyeongjangya-day .drawer__inner,
+  body.theme-mumyeongjangya-night .drawer__inner,
+  body.theme-mumyeongjangya-day .column-header,
+  body.theme-mumyeongjangya-night .column-header,
+  body.theme-mumyeongjangya-day .tabs-bar__wrapper,
+  body.theme-mumyeongjangya-night .tabs-bar__wrapper,
+  body.theme-mumyeongjangya-day .ui__header,
+  body.theme-mumyeongjangya-night .ui__header {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background-color: var(--mumyeongjangya-glass-fallback);
+  }
+}
+
+@media screen and (width <= 759px) {
+  body.theme-mumyeongjangya-day::before,
+  body.theme-mumyeongjangya-night::before {
+    background-position: center top;
+  }
+
+  body.theme-mumyeongjangya-day .columns-area__panels__pane--navigational .columns-area__panels__pane__inner,
+  body.theme-mumyeongjangya-night .columns-area__panels__pane--navigational .columns-area__panels__pane__inner {
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
+    backdrop-filter: blur(22px) saturate(150%);
+    background-color: var(--color-bg-90);
+  }
+}

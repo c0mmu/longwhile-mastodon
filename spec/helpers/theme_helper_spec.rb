@@ -34,6 +34,18 @@ RSpec.describe ThemeHelper do
           )
       end
     end
+
+    context 'when using the Mumyeongjangya day theme' do
+      let(:theme) { 'mumyeongjangya-day' }
+
+      it 'returns the Mumyeongjangya day stylesheet' do
+        expect(html_links.first.attributes.symbolize_keys)
+          .to include(
+            href: have_attributes(value: match(/mumyeongjangya-day/)),
+            media: have_attributes(value: 'all')
+          )
+      end
+    end
   end
 
   describe 'theme_color_tags' do
@@ -63,6 +75,39 @@ RSpec.describe ThemeHelper do
         expect(html_theme_colors.first.attributes.symbolize_keys)
           .to include(
             content: have_attributes(value: Themes::THEME_COLORS[:light])
+          )
+      end
+    end
+
+    context 'when using mastodon-bird-ui-light theme' do
+      let(:theme) { 'mastodon-bird-ui-light' }
+
+      it 'returns the light browser color' do
+        expect(html_theme_colors.first.attributes.symbolize_keys)
+          .to include(
+            content: have_attributes(value: Themes::THEME_COLORS[:light])
+          )
+      end
+    end
+
+    context 'when using the Mumyeongjangya day theme' do
+      let(:theme) { 'mumyeongjangya-day' }
+
+      it 'returns the Mumyeongjangya day browser color' do
+        expect(html_theme_colors.first.attributes.symbolize_keys)
+          .to include(
+            content: have_attributes(value: Themes::THEME_COLORS[:mumyeongjangya_day])
+          )
+      end
+    end
+
+    context 'when using the Mumyeongjangya night theme' do
+      let(:theme) { 'mumyeongjangya-night' }
+
+      it 'returns the Mumyeongjangya night browser color' do
+        expect(html_theme_colors.first.attributes.symbolize_keys)
+          .to include(
+            content: have_attributes(value: Themes::THEME_COLORS[:mumyeongjangya_night])
           )
       end
     end

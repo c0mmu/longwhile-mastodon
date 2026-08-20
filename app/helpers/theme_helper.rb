@@ -53,6 +53,15 @@ module ThemeHelper
   end
 
   def theme_color_for(theme)
-    theme == 'mastodon-light' ? Themes::THEME_COLORS[:light] : Themes::THEME_COLORS[:dark]
+    case theme
+    when 'mastodon-light', 'mastodon-bird-ui-light'
+      Themes::THEME_COLORS[:light]
+    when 'mumyeongjangya-day'
+      Themes::THEME_COLORS[:mumyeongjangya_day]
+    when 'mumyeongjangya-night'
+      Themes::THEME_COLORS[:mumyeongjangya_night]
+    else
+      Themes::THEME_COLORS[:dark]
+    end
   end
 end

@@ -1910,6 +1910,8 @@ en:
     mastodon-light: Mastodon (Light)
     mastodon-bird-ui-light: Twitter (Light)
     mastodon-bird-ui-dark: Twitter (Dark)
+    mumyeongjangya-day: Mumyeongjangya Day (Light)
+    mumyeongjangya-night: Mumyeongjangya Night (Dark)
     # theme-ui-light: Custom (Light)
     # theme-ui-dark: Custom (Dark)
   time:

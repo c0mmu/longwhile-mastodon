@@ -1859,6 +1859,8 @@ ko:
     mastodon-light: 마스토돈 (밝음)
     mastodon-bird-ui-light: 유사 트위터 (밝음)
     mastodon-bird-ui-dark: 유사 트위터 (어두움)
+    mumyeongjangya-day: 무명장야 낮 테마 (라이트)
+    mumyeongjangya-night: 무명장야 밤 테마 (다크)
     # theme-ui-light: 커스텀 테마 (낮)
     # theme-ui-dark: 커스텀 테마 (밤)
   time:
