@@ -9,8 +9,8 @@ class Themes
   THEME_COLORS = {
     dark: '#181820',
     light: '#ffffff',
-    mumyeongjangya_day: '#f3eff9',
-    mumyeongjangya_night: '#0c081e',
+    mumyeongjangya_day: '#f7f3fa',
+    mumyeongjangya_night: '#060312',
   }.freeze
 
   def initialize

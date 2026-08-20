@@ -6,160 +6,162 @@
 body.theme-mumyeongjangya-night {
   color-scheme: dark;
 
-  --mumyeongjangya-page-bg: #0c081e;
+  --mumyeongjangya-page-bg: #060312;
+  --mumyeongjangya-vignette: rgba(0, 0, 0, 38%);
   --mumyeongjangya-background-image: none;
-  --mumyeongjangya-background-overlay: radial-gradient(circle at 18% 8%, rgba(154, 29, 218, 22%), transparent 36%), radial-gradient(circle at 82% 22%, rgba(34, 81, 165, 16%), transparent 32%), linear-gradient(150deg, rgba(12, 8, 30, 96%), rgba(35, 19, 91, 90%));
-  --mumyeongjangya-glass: rgba(20, 12, 43, 76%);
-  --mumyeongjangya-glass-strong: rgba(24, 16, 49, 90%);
-  --mumyeongjangya-glass-fallback: #181031;
-  --mumyeongjangya-glass-border: rgba(169, 120, 255, 28%);
-  --mumyeongjangya-glass-highlight: rgba(247, 243, 255, 7%);
-  --mumyeongjangya-glass-shadow: 0 18px 60px rgba(3, 1, 12, 42%), inset 0 1px 0 rgba(247, 243, 255, 5%);
-  --color-column: rgba(12, 8, 30, 32%);
+  --mumyeongjangya-background-overlay: radial-gradient(circle at 72% 18%, rgba(214, 20, 246, 22%), transparent 34%), radial-gradient(circle at 14% 72%, rgba(91, 170, 222, 14%), transparent 30%), linear-gradient(150deg, rgba(6, 3, 18, 96%), rgba(23, 7, 76, 88%));
+  --mumyeongjangya-glass: rgba(16, 6, 46, 72%);
+  --mumyeongjangya-glass-strong: rgba(23, 7, 76, 88%);
+  --mumyeongjangya-glass-fallback: #10062e;
+  --mumyeongjangya-glass-border: rgba(172, 151, 211, 32%);
+  --mumyeongjangya-glass-highlight: rgba(252, 249, 252, 8%);
+  --mumyeongjangya-glass-shadow: 0 18px 60px rgba(6, 3, 18, 55%), inset 0 1px 0 rgba(252, 249, 252, 7%);
+  --color-column: rgba(6, 3, 18, 30%);
   --color-bg: var(--mumyeongjangya-glass);
-  --color-fg: #f7f3ff;
-  --color-dim: #b6a8cc;
+  --color-fg: #fcf9fc;
+  --color-dim: #b99dd4;
   --color-light-purple: var(--color-dim);
-  --color-lighter-purple: #d2c5e8;
-  --color-topaz: #e8e0f5;
-  --color-light-text: #fbf9ff;
-  --color-light-shade: rgba(167, 120, 255, 12%);
-  --color-dark: rgba(35, 19, 91, 80%);
-  --color-mud: rgba(29, 17, 60, 84%);
-  --color-bg-compose-form: rgba(29, 17, 60, 82%);
-  --color-bg-compose-form-focus: rgba(42, 24, 83, 94%);
-  --color-bg-75: rgba(12, 8, 30, 76%);
-  --color-bg-90: rgba(12, 8, 30, 92%);
-  --color-brand-longwhile: #a778ff;
-  --color-brand-longwhile-dim: #b6a8cc;
-  --color-brand-longwhile-dark: #23135b;
-  --color-brand-longwhile-bg: #0c081e;
-  --color-brand-longwhile-text-light: #d2c5e8;
-  --color-brand-longwhile-links: #5ad9ff;
-  --color-brand-longwhile-threaded-line: rgba(167, 120, 255, 46%);
+  --color-lighter-purple: #e2cfed;
+  --color-topaz: #eee2f7;
+  --color-light-text: #fcf9fc;
+  --color-light-shade: rgba(174, 11, 241, 12%);
+  --color-dark: rgba(23, 7, 76, 82%);
+  --color-mud: rgba(39, 14, 82, 86%);
+  --color-bg-compose-form: rgba(23, 7, 76, 80%);
+  --color-bg-compose-form-focus: rgba(45, 11, 111, 94%);
+  --color-bg-75: rgba(16, 6, 46, 76%);
+  --color-bg-90: rgba(16, 6, 46, 92%);
+  --color-brand-longwhile: #ae0bf1;
+  --color-brand-longwhile-dim: #b99dd4;
+  --color-brand-longwhile-dark: #2d0b6f;
+  --color-brand-longwhile-bg: #060312;
+  --color-brand-longwhile-text-light: #e2cfed;
+  --color-brand-longwhile-links: #5baade;
+  --color-brand-longwhile-threaded-line: rgba(156, 92, 218, 46%);
   --logo: url('../images/logos/wordmark_dark.png');
   --m-logo: url('../images/logos/m_logo_dark.png');
-  --color-link: #5ad9ff;
-  --color-accent: #a778ff;
-  --color-accent-dark: #8f54ed;
-  --color-accent-dark-50: rgba(143, 84, 237, 50%);
-  --color-hashtag: #c49cff;
-  --color-mention: #5ad9ff;
-  --color-post-button: #8f54ed;
+  --color-link: #5baade;
+  --color-accent: #ae0bf1;
+  --color-accent-dark: #7006ec;
+  --color-accent-dark-50: rgba(112, 6, 236, 50%);
+  --color-hashtag: #d614f6;
+  --color-mention: #5baade;
+  --color-post-button: #7006ec;
   --color-post-button-text: #ffffff;
   --color-on-brand: #ffffff;
-  --color-button-text: #f7f3ff;
-  --color-button-border: rgba(210, 197, 232, 54%);
-  --color-ghost-button-text: #c49cff;
+  --color-button-text: #fcf9fc;
+  --color-button-border: rgba(172, 151, 211, 54%);
+  --color-ghost-button-text: #d614f6;
   --color-border: var(--mumyeongjangya-glass-border);
-  --color-thread-line: rgba(167, 120, 255, 40%);
-  --color-noti-hover: rgba(167, 120, 255, 12%);
-  --color-icon-button-hover: rgba(196, 156, 255, 12%);
-  --color-profile-button-hover: rgba(167, 120, 255, 14%);
-  --color-focusable-toot: rgba(167, 120, 255, 8%);
-  --color-modal-overlay: rgba(5, 2, 15, 72%);
+  --color-thread-line: rgba(156, 92, 218, 40%);
+  --color-noti-hover: rgba(174, 11, 241, 12%);
+  --color-icon-button-hover: rgba(214, 20, 246, 12%);
+  --color-profile-button-hover: rgba(174, 11, 241, 14%);
+  --color-focusable-toot: rgba(174, 11, 241, 8%);
+  --color-modal-overlay: rgba(6, 3, 18, 76%);
   --color-modal-panel: var(--mumyeongjangya-glass-strong);
   --account-switcher-manage-overlay: var(--color-modal-overlay);
-  --color-column-link: #d2c5e8;
-  --color-column-link-hover: #c49cff;
-  --color-black-coral: #776a91;
-  --color-dark-electric-blue: #8b7ca8;
-  --color-arsenic: #35254f;
-  --color-outer-space: #493862;
-  --color-brand-longwhile-heart: #ff4fd8;
+  --color-column-link: #e2cfed;
+  --color-column-link-hover: #d614f6;
+  --color-black-coral: #715da1;
+  --color-dark-electric-blue: #8868ab;
+  --color-arsenic: #270e52;
+  --color-outer-space: #35286f;
+  --color-brand-longwhile-heart: #d614f6;
   --color-brand-longwhile-favourite: #ffd166;
   --color-green: #28d7c0;
-  --color-red: #ff4fd8;
-  --color-red-75: rgba(255, 79, 216, 75%);
+  --color-red: #d614f6;
+  --color-red-75: rgba(214, 20, 246, 75%);
   --color-yellow: #ffd166;
   --color-brand-longwhile-danger: #ff4f76;
   --color-brand-longwhile-danger-hover: #dc365e;
   --color-destructive: #ff4f76;
-  --color-verified: #5ad9ff;
-  --color-light-fuchsia-pink: #f08cff;
-  --background-color: #0c081e;
-  --background-color-tint: rgba(12, 8, 30, 90%);
+  --color-verified: #5baade;
+  --color-light-fuchsia-pink: #d614f6;
+  --background-color: #060312;
+  --background-color-tint: rgba(6, 3, 18, 90%);
   --background-border-color: var(--color-border);
   --surface-background-color: var(--mumyeongjangya-glass);
-  --surface-variant-background-color: rgba(35, 19, 91, 78%);
-  --surface-variant-active-background-color: rgba(83, 36, 157, 76%);
+  --surface-variant-background-color: rgba(23, 7, 76, 78%);
+  --surface-variant-active-background-color: rgba(45, 11, 111, 82%);
   --dropdown-background-color: var(--mumyeongjangya-glass-strong);
   --dropdown-border-color: var(--color-border);
   --modal-background-color: var(--color-modal-overlay);
   --modal-background-variant-color: var(--mumyeongjangya-glass-strong);
   --modal-border-color: var(--color-border);
-  --input-background-color: rgba(12, 8, 30, 70%);
-  --input-placeholder-color: #9f91b6;
+  --input-background-color: rgba(6, 3, 18, 72%);
+  --input-placeholder-color: #978fad;
   --on-input-color: var(--color-fg);
   --background-filter: blur(20px) saturate(145%);
-  --active-header-box-shadow: 0 1px 0 rgba(167, 120, 255, 34%);
-  --active-header-radial-gradient: radial-gradient(ellipse, rgba(154, 29, 218, 20%) 0, rgba(154, 29, 218, 0%) 64%);
-  --compose-form-linear-gradient: linear-gradient(180deg, rgba(29, 17, 60, 98%) 0%, rgba(29, 17, 60, 94%) 55%, rgba(29, 17, 60, 58%) 82%, rgba(29, 17, 60, 0%) 100%);
+  --active-header-box-shadow: 0 1px 0 rgba(174, 11, 241, 34%);
+  --active-header-radial-gradient: radial-gradient(ellipse, rgba(214, 20, 246, 20%) 0, rgba(214, 20, 246, 0%) 64%);
+  --compose-form-linear-gradient: linear-gradient(180deg, rgba(23, 7, 76, 98%) 0%, rgba(23, 7, 76, 94%) 55%, rgba(23, 7, 76, 58%) 82%, rgba(23, 7, 76, 0%) 100%);
 }
 
 body.theme-mumyeongjangya-day {
   color-scheme: light;
 
-  --mumyeongjangya-page-bg: #f3eff9;
+  --mumyeongjangya-page-bg: #f7f3fa;
+  --mumyeongjangya-vignette: rgba(49, 30, 72, 18%);
   --mumyeongjangya-background-image: none;
-  --mumyeongjangya-background-overlay: radial-gradient(circle at 18% 8%, rgba(151, 100, 213, 18%), transparent 38%), radial-gradient(circle at 82% 18%, rgba(90, 217, 255, 13%), transparent 34%), linear-gradient(150deg, rgba(250, 248, 253, 97%), rgba(232, 224, 245, 94%));
-  --mumyeongjangya-glass: rgba(255, 255, 255, 70%);
-  --mumyeongjangya-glass-strong: rgba(251, 249, 253, 90%);
-  --mumyeongjangya-glass-fallback: #fbf9fd;
-  --mumyeongjangya-glass-border: rgba(83, 36, 157, 18%);
-  --mumyeongjangya-glass-highlight: rgba(255, 255, 255, 72%);
-  --mumyeongjangya-glass-shadow: 0 18px 55px rgba(55, 35, 85, 16%), inset 0 1px 0 rgba(255, 255, 255, 80%);
-  --color-column: rgba(255, 255, 255, 30%);
+  --mumyeongjangya-background-overlay: radial-gradient(circle at 72% 18%, rgba(161, 67, 214, 12%), transparent 35%), radial-gradient(circle at 14% 72%, rgba(91, 170, 222, 10%), transparent 32%), linear-gradient(150deg, rgba(252, 249, 252, 78%), rgba(226, 207, 237, 68%));
+  --mumyeongjangya-glass: rgba(252, 249, 252, 72%);
+  --mumyeongjangya-glass-strong: rgba(247, 243, 250, 90%);
+  --mumyeongjangya-glass-fallback: #fcf9fc;
+  --mumyeongjangya-glass-border: rgba(88, 34, 155, 20%);
+  --mumyeongjangya-glass-highlight: rgba(255, 255, 255, 80%);
+  --mumyeongjangya-glass-shadow: 0 18px 55px rgba(49, 14, 112, 15%), inset 0 1px 0 rgba(255, 255, 255, 84%);
+  --color-column: rgba(252, 249, 252, 32%);
   --color-bg: var(--mumyeongjangya-glass);
-  --color-fg: #241b32;
-  --color-dim: #675b78;
+  --color-fg: #231636;
+  --color-dim: #585467;
   --color-light-purple: var(--color-dim);
-  --color-lighter-purple: #554668;
-  --color-topaz: #51445f;
-  --color-light-text: #2d233b;
-  --color-light-shade: rgba(106, 63, 195, 8%);
-  --color-dark: rgba(236, 229, 247, 82%);
-  --color-mud: rgba(243, 238, 249, 84%);
-  --color-bg-compose-form: rgba(248, 245, 252, 76%);
-  --color-bg-compose-form-focus: rgba(255, 255, 255, 92%);
-  --color-bg-75: rgba(251, 249, 253, 76%);
-  --color-bg-90: rgba(251, 249, 253, 92%);
-  --color-brand-longwhile: #6a3fc3;
-  --color-brand-longwhile-dim: #675b78;
-  --color-brand-longwhile-dark: #4f2a9d;
-  --color-brand-longwhile-bg: #f3eff9;
-  --color-brand-longwhile-text-light: #554668;
+  --color-lighter-purple: #493173;
+  --color-topaz: #312a50;
+  --color-light-text: #231636;
+  --color-light-shade: rgba(88, 34, 155, 8%);
+  --color-dark: rgba(238, 226, 247, 84%);
+  --color-mud: rgba(247, 243, 250, 86%);
+  --color-bg-compose-form: rgba(247, 243, 250, 78%);
+  --color-bg-compose-form-focus: rgba(252, 249, 252, 94%);
+  --color-bg-75: rgba(247, 243, 250, 76%);
+  --color-bg-90: rgba(247, 243, 250, 92%);
+  --color-brand-longwhile: #58229b;
+  --color-brand-longwhile-dim: #585467;
+  --color-brand-longwhile-dark: #310e95;
+  --color-brand-longwhile-bg: #f7f3fa;
+  --color-brand-longwhile-text-light: #493173;
   --color-brand-longwhile-links: #256a8f;
-  --color-brand-longwhile-threaded-line: rgba(106, 63, 195, 32%);
+  --color-brand-longwhile-threaded-line: rgba(88, 34, 155, 32%);
   --logo: url('../images/logos/wordmark_light.png');
   --m-logo: url('../images/logos/m_logo_light.png');
   --color-link: #256a8f;
-  --color-accent: #6a3fc3;
-  --color-accent-dark: #5b32ad;
-  --color-accent-dark-50: rgba(91, 50, 173, 50%);
-  --color-hashtag: #6a3fc3;
+  --color-accent: #58229b;
+  --color-accent-dark: #310e95;
+  --color-accent-dark-50: rgba(49, 14, 149, 50%);
+  --color-hashtag: #8921b3;
   --color-mention: #256a8f;
-  --color-post-button: #6a3fc3;
+  --color-post-button: #58229b;
   --color-post-button-text: #ffffff;
   --color-on-brand: #ffffff;
   --color-button-text: #ffffff;
-  --color-button-border: rgba(83, 36, 157, 30%);
-  --color-ghost-button-text: #5b32ad;
+  --color-button-border: rgba(88, 34, 155, 30%);
+  --color-ghost-button-text: #58229b;
   --color-border: var(--mumyeongjangya-glass-border);
-  --color-thread-line: rgba(106, 63, 195, 28%);
-  --color-noti-hover: rgba(106, 63, 195, 8%);
-  --color-icon-button-hover: rgba(106, 63, 195, 9%);
-  --color-profile-button-hover: rgba(106, 63, 195, 10%);
-  --color-focusable-toot: rgba(106, 63, 195, 6%);
-  --color-modal-overlay: rgba(36, 27, 50, 34%);
+  --color-thread-line: rgba(88, 34, 155, 28%);
+  --color-noti-hover: rgba(88, 34, 155, 8%);
+  --color-icon-button-hover: rgba(137, 33, 179, 9%);
+  --color-profile-button-hover: rgba(88, 34, 155, 10%);
+  --color-focusable-toot: rgba(88, 34, 155, 6%);
+  --color-modal-overlay: rgba(35, 22, 54, 36%);
   --color-modal-panel: var(--mumyeongjangya-glass-strong);
   --account-switcher-manage-overlay: var(--color-modal-overlay);
-  --color-column-link: #4b3d5f;
-  --color-column-link-hover: #6a3fc3;
-  --color-black-coral: #897e98;
-  --color-dark-electric-blue: #796d8b;
-  --color-arsenic: #ddd4e9;
-  --color-outer-space: #d4c9e2;
+  --color-column-link: #493173;
+  --color-column-link-hover: #58229b;
+  --color-black-coral: #71677e;
+  --color-dark-electric-blue: #655d72;
+  --color-arsenic: #e2cfed;
+  --color-outer-space: #d8c8e7;
   --color-brand-longwhile-heart: #d71f91;
   --color-brand-longwhile-favourite: #9a6400;
   --color-green: #087f74;
@@ -170,25 +172,25 @@ body.theme-mumyeongjangya-day {
   --color-brand-longwhile-danger-hover: #a71f41;
   --color-destructive: #c42b51;
   --color-verified: #256a8f;
-  --color-light-fuchsia-pink: #a33dc2;
-  --background-color: #f3eff9;
-  --background-color-tint: rgba(243, 239, 249, 90%);
+  --color-light-fuchsia-pink: #8921b3;
+  --background-color: #f7f3fa;
+  --background-color-tint: rgba(247, 243, 250, 90%);
   --background-border-color: var(--color-border);
   --surface-background-color: var(--mumyeongjangya-glass);
-  --surface-variant-background-color: rgba(239, 232, 247, 82%);
-  --surface-variant-active-background-color: rgba(221, 210, 239, 86%);
+  --surface-variant-background-color: rgba(238, 226, 247, 82%);
+  --surface-variant-active-background-color: rgba(226, 207, 237, 88%);
   --dropdown-background-color: var(--mumyeongjangya-glass-strong);
   --dropdown-border-color: var(--color-border);
   --modal-background-color: var(--color-modal-overlay);
   --modal-background-variant-color: var(--mumyeongjangya-glass-strong);
   --modal-border-color: var(--color-border);
-  --input-background-color: rgba(255, 255, 255, 72%);
-  --input-placeholder-color: #796d8b;
+  --input-background-color: rgba(252, 249, 252, 76%);
+  --input-placeholder-color: #71677e;
   --on-input-color: var(--color-fg);
   --background-filter: blur(20px) saturate(135%);
-  --active-header-box-shadow: 0 1px 0 rgba(106, 63, 195, 22%);
-  --active-header-radial-gradient: radial-gradient(ellipse, rgba(151, 100, 213, 15%) 0, rgba(151, 100, 213, 0%) 64%);
-  --compose-form-linear-gradient: linear-gradient(180deg, rgba(251, 249, 253, 98%) 0%, rgba(251, 249, 253, 94%) 55%, rgba(251, 249, 253, 58%) 82%, rgba(251, 249, 253, 0%) 100%);
+  --active-header-box-shadow: 0 1px 0 rgba(88, 34, 155, 24%);
+  --active-header-radial-gradient: radial-gradient(ellipse, rgba(161, 67, 214, 15%) 0, rgba(161, 67, 214, 0%) 64%);
+  --compose-form-linear-gradient: linear-gradient(180deg, rgba(247, 243, 250, 98%) 0%, rgba(247, 243, 250, 94%) 55%, rgba(247, 243, 250, 58%) 82%, rgba(247, 243, 250, 0%) 100%);
 }
 
 body.theme-mumyeongjangya-day,
@@ -211,6 +213,68 @@ body.theme-mumyeongjangya-night::before {
   pointer-events: none;
   position: fixed;
   z-index: -1;
+}
+
+/* Fixed film grain and vignette over the whole interface. The local SVG keeps
+ * the effect available on HTTPS instances without relying on a third party. */
+body.theme-mumyeongjangya-day::after,
+body.theme-mumyeongjangya-night::after {
+  animation: mumyeongjangya-noise 0.2s steps(2, end) infinite;
+  background-image: radial-gradient(ellipse at center, transparent 65%, var(--mumyeongjangya-vignette) 100%), url('../images/mumyeongjangya-noise.svg');
+  background-position: center, 0 0;
+  background-repeat: no-repeat, repeat;
+  background-size: 100% 100%, 180px 180px;
+  content: '';
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 2147483646;
+}
+
+@keyframes mumyeongjangya-noise {
+  0% {
+    background-position: center, 0 0;
+  }
+
+  10% {
+    background-position: center, -9px -9px;
+  }
+
+  20% {
+    background-position: center, -18px 9px;
+  }
+
+  30% {
+    background-position: center, 9px -18px;
+  }
+
+  40% {
+    background-position: center, -9px 27px;
+  }
+
+  50% {
+    background-position: center, -18px 9px;
+  }
+
+  60% {
+    background-position: center, 27px 0;
+  }
+
+  70% {
+    background-position: center, 0 18px;
+  }
+
+  80% {
+    background-position: center, -27px 0;
+  }
+
+  90% {
+    background-position: center, 18px 9px;
+  }
+
+  100% {
+    background-position: center, 9px 0;
+  }
 }
 
 body.theme-mumyeongjangya-day .columns-area__panels__pane__inner,
@@ -271,6 +335,13 @@ body.theme-mumyeongjangya-night .search__popout {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     background-color: var(--mumyeongjangya-glass-fallback);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.theme-mumyeongjangya-day::after,
+  body.theme-mumyeongjangya-night::after {
+    animation: none;
   }
 }
 
