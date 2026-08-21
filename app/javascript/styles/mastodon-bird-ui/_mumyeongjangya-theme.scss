@@ -366,7 +366,6 @@ body.theme-mumyeongjangya-night {
   .drawer__inner,
   .compose-panel,
   .compose-form,
-  .compose-form__highlightable,
   .ui__navigation-bar {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
@@ -389,12 +388,8 @@ body.theme-mumyeongjangya-night {
   .ui__compose-fab,
   .ui__compose-fab:hover,
   .ui__compose-fab:focus-visible,
-  .search,
-  .search.active,
   .search__input,
   .search__input:focus,
-  .compose-form__highlightable,
-  .compose-form__highlightable:focus-within,
   .compose-form__autosuggest-wrapper,
   .compose-form__autosuggest-wrapper:focus-within,
   .compose-form__buttons-wrapper,
@@ -407,6 +402,24 @@ body.theme-mumyeongjangya-night {
     background-image: none !important;
     border-color: transparent !important;
     box-shadow: none !important;
+  }
+
+  .search,
+  .compose-form__highlightable {
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    backdrop-filter: blur(18px) saturate(140%);
+    background-color: var(--color-bg-compose-form) !important;
+    background-image: none !important;
+    border: 1px solid var(--mumyeongjangya-glass-border) !important;
+    box-shadow: 0 10px 30px rgba(49, 14, 112, 14%), inset 0 1px 0 var(--mumyeongjangya-glass-highlight) !important;
+  }
+
+  .search.active,
+  .search:focus-within,
+  .compose-form__highlightable:focus-within {
+    background-color: var(--color-bg-compose-form-focus) !important;
+    border-color: var(--color-accent-dark-50) !important;
+    box-shadow: 0 12px 34px rgba(49, 14, 112, 20%), inset 0 1px 0 var(--mumyeongjangya-glass-highlight) !important;
   }
 
   .navigation-panel__compose-button,
