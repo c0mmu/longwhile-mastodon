@@ -274,6 +274,183 @@ body.theme-mumyeongjangya-night::after {
   }
 }
 
+/* Authentication and preferences use the server-rendered form/admin styles,
+ * so give those surfaces the same palette instead of Mastodon's Sass defaults. */
+body.theme-mumyeongjangya-day,
+body.theme-mumyeongjangya-night {
+  .form-container > .simple_form,
+  .form-container > .form-section,
+  .form-container > .alternative-login,
+  .admin-wrapper .form-section,
+  .admin-wrapper .dashboard__counters > div > div,
+  .admin-wrapper .dashboard__counters > div > a,
+  .admin-wrapper .batch-table__toolbar,
+  .admin-wrapper .batch-table__select-all,
+  .admin-wrapper .batch-table__row,
+  .admin-wrapper .table th,
+  .admin-wrapper .table td {
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    backdrop-filter: blur(18px) saturate(140%);
+    background-color: var(--mumyeongjangya-glass) !important;
+    border-color: var(--mumyeongjangya-glass-border) !important;
+  }
+
+  .form-container > .simple_form,
+  .form-container > .alternative-login {
+    border: 1px solid var(--mumyeongjangya-glass-border);
+    border-radius: 16px;
+    box-shadow: var(--mumyeongjangya-glass-shadow);
+    padding: 24px;
+  }
+
+  .simple_form input[type='text'],
+  .simple_form input[type='number'],
+  .simple_form input[type='email'],
+  .simple_form input[type='password'],
+  .simple_form input[type='url'],
+  .simple_form input[type='datetime-local'],
+  .simple_form textarea,
+  .simple_form select,
+  .simple_form .input.static .label_input__wrapper {
+    background-color: var(--input-background-color) !important;
+    border-color: var(--mumyeongjangya-glass-border) !important;
+    color: var(--on-input-color) !important;
+  }
+
+  .simple_form input[type='text']:focus,
+  .simple_form input[type='number']:focus,
+  .simple_form input[type='email']:focus,
+  .simple_form input[type='password']:focus,
+  .simple_form input[type='url']:focus,
+  .simple_form input[type='datetime-local']:focus,
+  .simple_form textarea:focus,
+  .simple_form select:focus {
+    background-color: var(--color-bg-compose-form-focus) !important;
+    border-color: var(--color-accent-dark-50) !important;
+    box-shadow: 0 0 0 3px var(--color-light-shade) !important;
+  }
+
+  .simple_form input::placeholder,
+  .simple_form textarea::placeholder {
+    color: var(--input-placeholder-color) !important;
+  }
+
+  .simple_form input[type='checkbox'],
+  .simple_form input[type='radio'] {
+    accent-color: var(--color-accent);
+  }
+
+  .simple_form .btn:not(.negative),
+  .simple_form .button:not(.button-secondary, .button-tertiary, .button--destructive) {
+    background-color: var(--color-post-button) !important;
+    color: var(--color-post-button-text) !important;
+  }
+
+  .simple_form .btn:not(.negative):hover,
+  .simple_form .btn:not(.negative):focus,
+  .simple_form .btn:not(.negative):active,
+  .simple_form .button:not(.button-secondary, .button-tertiary, .button--destructive):hover,
+  .simple_form .button:not(.button-secondary, .button-tertiary, .button--destructive):focus,
+  .simple_form .button:not(.button-secondary, .button-tertiary, .button--destructive):active {
+    background-color: var(--color-accent-dark) !important;
+  }
+
+  .form-container .simple_form a,
+  .form-footer a,
+  .quick-nav a,
+  .admin-wrapper .simple_form a {
+    color: var(--color-link);
+  }
+
+  .form-container .simple_form .title,
+  .form-container .simple_form label,
+  .admin-wrapper .content__heading h2,
+  .admin-wrapper .simple_form label {
+    color: var(--color-fg);
+  }
+
+  .form-container .simple_form .lead,
+  .form-container .simple_form .hint,
+  .admin-wrapper .simple_form .hint {
+    color: var(--color-dim);
+  }
+
+  .admin-wrapper .sidebar-wrapper__inner,
+  .admin-wrapper .sidebar ul ul,
+  .admin-wrapper .sidebar__toggle {
+    -webkit-backdrop-filter: blur(20px) saturate(145%);
+    backdrop-filter: blur(20px) saturate(145%);
+    background-color: var(--mumyeongjangya-glass-strong) !important;
+    border-color: var(--mumyeongjangya-glass-border) !important;
+  }
+
+  .admin-wrapper .sidebar ul a {
+    color: var(--color-dim);
+  }
+
+  .admin-wrapper .sidebar ul a:hover,
+  .admin-wrapper .sidebar ul a:focus-visible,
+  .admin-wrapper .sidebar ul .simple-navigation-active-leaf a {
+    background-color: var(--color-light-shade);
+    color: var(--color-fg);
+  }
+
+  .admin-wrapper .sidebar ul .simple-navigation-active-leaf a {
+    box-shadow: inset 3px 0 0 var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  .admin-wrapper .content__heading__tabs a:hover,
+  .admin-wrapper .content__heading__tabs a:focus,
+  .admin-wrapper .content__heading__tabs a:active,
+  .admin-wrapper .dashboard__counters > div > a:hover,
+  .admin-wrapper .dashboard__counters > div > a:focus,
+  .admin-wrapper .dashboard__counters > div > a:active,
+  .admin-wrapper .dashboard__quick-access:hover,
+  .admin-wrapper .dashboard__quick-access:focus,
+  .admin-wrapper .dashboard__quick-access:active {
+    background-color: var(--surface-variant-active-background-color) !important;
+  }
+
+  .admin-wrapper .content__heading__tabs a.selected,
+  .admin-wrapper .dashboard__quick-access {
+    background-color: var(--surface-variant-background-color) !important;
+    color: var(--color-fg) !important;
+  }
+
+  .admin-wrapper .content__heading__tabs a.selected {
+    box-shadow: inset 0 -2px 0 var(--color-accent);
+    color: var(--color-accent) !important;
+  }
+
+  .admin-wrapper .filters a {
+    border-bottom-color: var(--mumyeongjangya-glass-border);
+    color: var(--color-dim);
+  }
+
+  .admin-wrapper .filters a:hover,
+  .admin-wrapper .filters a.selected {
+    border-bottom-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  body.theme-mumyeongjangya-day,
+  body.theme-mumyeongjangya-night {
+    .form-container > .simple_form,
+    .form-container > .form-section,
+    .form-container > .alternative-login,
+    .admin-wrapper .sidebar-wrapper__inner,
+    .admin-wrapper .sidebar ul ul,
+    .admin-wrapper .sidebar__toggle {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      background-color: var(--mumyeongjangya-glass-fallback) !important;
+    }
+  }
+}
+
 body.theme-mumyeongjangya-day .columns-area__panels__pane__inner,
 body.theme-mumyeongjangya-night .columns-area__panels__pane__inner,
 body.theme-mumyeongjangya-day .column > .scrollable,
@@ -422,6 +599,14 @@ body.theme-mumyeongjangya-night {
     box-shadow: 0 12px 34px rgba(49, 14, 112, 20%), inset 0 1px 0 var(--mumyeongjangya-glass-highlight) !important;
   }
 
+  /* backdrop-filter creates a stacking context. Keep the expanded search and
+   * its popout above Bird UI's compose form, which uses z-index: 4. */
+  .search.active,
+  .search:focus-within {
+    position: relative;
+    z-index: 5;
+  }
+
   .navigation-panel__compose-button,
   .navigation-panel__compose-button:hover,
   .navigation-panel__compose-button:focus-visible,
@@ -429,5 +614,58 @@ body.theme-mumyeongjangya-night {
   .ui__compose-fab:hover,
   .ui__compose-fab:focus-visible {
     color: var(--color-accent);
+  }
+}
+
+/* These mobile controls were intentionally transparent in the base variant.
+ * Place the colored version last so it wins the cascade on narrow screens. */
+@media screen and (width <= 759px) {
+  body.theme-mumyeongjangya-day,
+  body.theme-mumyeongjangya-night {
+    .ui__navigation-bar {
+      -webkit-backdrop-filter: blur(22px) saturate(150%);
+      backdrop-filter: blur(22px) saturate(150%);
+      background-color: var(--mumyeongjangya-glass-strong) !important;
+      border-color: var(--mumyeongjangya-glass-border) !important;
+      box-shadow: 0 -10px 32px rgba(49, 14, 112, 14%), inset 0 1px 0 var(--mumyeongjangya-glass-highlight) !important;
+    }
+
+    .ui__navigation-bar__item {
+      color: var(--color-column-link);
+    }
+
+    .ui__navigation-bar__item:hover,
+    .ui__navigation-bar__item:focus-visible,
+    .ui__navigation-bar__item.active {
+      background-color: var(--color-light-shade) !important;
+      color: var(--color-accent);
+    }
+
+    .ui__compose-fab,
+    .ui__compose-fab:hover,
+    .ui__compose-fab:focus-visible {
+      border: 1px solid var(--color-button-border) !important;
+      box-shadow: 0 12px 30px rgba(49, 14, 112, 30%), inset 0 1px 0 var(--mumyeongjangya-glass-highlight) !important;
+      color: var(--color-post-button-text) !important;
+    }
+
+    .ui__compose-fab {
+      background-color: var(--color-post-button) !important;
+    }
+
+    .ui__compose-fab:hover,
+    .ui__compose-fab:focus-visible,
+    .ui__compose-fab:active {
+      background-color: var(--color-accent-dark) !important;
+    }
+  }
+}
+
+@media screen and (width <= 759px) and (prefers-reduced-transparency: reduce) {
+  body.theme-mumyeongjangya-day .ui__navigation-bar,
+  body.theme-mumyeongjangya-night .ui__navigation-bar {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background-color: var(--mumyeongjangya-glass-fallback) !important;
   }
 }
