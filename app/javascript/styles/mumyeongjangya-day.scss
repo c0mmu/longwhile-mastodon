@@ -5,3 +5,101 @@
 @import 'mastodon-bird-ui/layout-single-column';
 @import 'mastodon-bird-ui/layout-multiple-columns';
 @import 'mastodon-bird-ui/mumyeongjangya-theme';
+
+/* Light-theme desktop side panels need a calmer frost layer than the center
+ * timeline. The background art remains visible, but neon magenta/cyan no longer
+ * competes directly with navigation labels or compose-panel account text. */
+@media screen and (width >= 760px) {
+  body.theme-mumyeongjangya-day {
+    --mumyeongjangya-day-panel-text: #35293f;
+    --mumyeongjangya-day-panel-muted: #6b6072;
+    --mumyeongjangya-day-panel-icon: #51435b;
+    --mumyeongjangya-day-panel-accent: #67327d;
+    --mumyeongjangya-day-panel-hover: rgba(103, 50, 125, 10%);
+    --mumyeongjangya-day-panel-active: rgba(103, 50, 125, 15%);
+    --mumyeongjangya-day-panel-border: rgba(74, 54, 89, 18%);
+
+    .columns-area__panels__pane--navigational .columns-area__panels__pane__inner,
+    .columns-area__panels__pane--compositional .columns-area__panels__pane__inner {
+      -webkit-backdrop-filter: blur(28px) saturate(82%);
+      backdrop-filter: blur(28px) saturate(82%);
+      background-color: rgba(246, 243, 248, 72%) !important;
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, 20%), rgba(236, 230, 241, 12%)) !important;
+      border-color: var(--mumyeongjangya-day-panel-border) !important;
+      box-shadow: 0 16px 44px rgba(47, 31, 59, 12%), inset 0 1px 0 rgba(255, 255, 255, 72%) !important;
+    }
+
+    /* Navigation: use charcoal-plum instead of saturated purple over the art. */
+    .navigation-panel,
+    .navigation-panel .column-link,
+    .navigation-panel__account-switch-link {
+      color: var(--mumyeongjangya-day-panel-text) !important;
+    }
+
+    .navigation-panel .column-link .icon,
+    .navigation-panel .column-link svg,
+    .navigation-panel__account-switch-link .icon,
+    .navigation-panel__account-switch-link svg {
+      color: var(--mumyeongjangya-day-panel-icon) !important;
+    }
+
+    .navigation-panel .column-link:hover,
+    .navigation-panel .column-link:focus-visible,
+    .navigation-panel__account-switch-link:hover,
+    .navigation-panel__account-switch-link:focus-visible {
+      background-color: var(--mumyeongjangya-day-panel-hover) !important;
+      color: var(--mumyeongjangya-day-panel-accent) !important;
+    }
+
+    .navigation-panel .column-link.active {
+      background-color: var(--mumyeongjangya-day-panel-active) !important;
+      color: var(--mumyeongjangya-day-panel-accent) !important;
+    }
+
+    .navigation-panel .column-link.active .icon,
+    .navigation-panel .column-link.active svg,
+    .navigation-panel .column-link:hover .icon,
+    .navigation-panel .column-link:hover svg,
+    .navigation-panel .column-link:focus-visible .icon,
+    .navigation-panel .column-link:focus-visible svg {
+      color: var(--mumyeongjangya-day-panel-accent) !important;
+    }
+
+    /* Compose-side account identity and helper labels need the same contrast. */
+    .compose-panel,
+    .compose-panel .navigation-bar,
+    .compose-panel .navigation-bar strong,
+    .compose-panel .display-name,
+    .compose-panel .display-name strong,
+    .compose-panel .account__display-name,
+    .compose-panel .account__display-name strong {
+      color: var(--mumyeongjangya-day-panel-text) !important;
+    }
+
+    .compose-panel .display-name__account,
+    .compose-panel .account__display-name .display-name__account,
+    .compose-panel .navigation-bar .display-name__account,
+    .compose-panel .character-counter,
+    .compose-panel .autosuggest-textarea__textarea::placeholder,
+    .compose-panel .search__input::placeholder {
+      color: var(--mumyeongjangya-day-panel-muted) !important;
+      opacity: 1;
+    }
+
+    /* Keep search and composer readable without turning them into stark white cards. */
+    .compose-panel .search,
+    .compose-panel .compose-form__highlightable {
+      background-color: rgba(255, 255, 255, 68%) !important;
+      border-color: rgba(74, 54, 89, 20%) !important;
+      box-shadow: 0 8px 24px rgba(47, 31, 59, 8%), inset 0 1px 0 rgba(255, 255, 255, 78%) !important;
+    }
+
+    .compose-panel .search.active,
+    .compose-panel .search:focus-within,
+    .compose-panel .compose-form__highlightable:focus-within {
+      background-color: rgba(255, 255, 255, 82%) !important;
+      border-color: rgba(103, 50, 125, 34%) !important;
+      box-shadow: 0 10px 28px rgba(47, 31, 59, 11%), 0 0 0 3px rgba(103, 50, 125, 6%) !important;
+    }
+  }
+}
