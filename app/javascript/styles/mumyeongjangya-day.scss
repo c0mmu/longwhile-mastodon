@@ -5,3 +5,154 @@
 @import 'mastodon-bird-ui/layout-single-column';
 @import 'mastodon-bird-ui/layout-multiple-columns';
 @import 'mastodon-bird-ui/mumyeongjangya-theme';
+
+/* Light theme desktop tuning
+ * - side panels: fully transparent
+ * - text/icon contrast adjusted for vivid background image
+ * - center column: softer lilac glass tint
+ */
+@media screen and (width >= 760px) {
+  body.theme-mumyeongjangya-day {
+    --mumyeongjangya-day-side-text: #2f2438;
+    --mumyeongjangya-day-side-muted: #5d5166;
+    --mumyeongjangya-day-side-icon: #43354d;
+    --mumyeongjangya-day-side-accent: #6a3382;
+    --mumyeongjangya-day-side-hover: rgba(255, 255, 255, 18%);
+    --mumyeongjangya-day-side-active: rgba(255, 255, 255, 28%);
+    --mumyeongjangya-day-side-shadow: 0 1px 10px rgba(255, 255, 255, 22%);
+
+    --mumyeongjangya-day-center-panel: rgba(250, 246, 252, 58%);
+    --mumyeongjangya-day-center-panel-strong: rgba(248, 242, 251, 72%);
+    --mumyeongjangya-day-center-item: rgba(255, 250, 255, 22%);
+    --mumyeongjangya-day-center-item-hover: rgba(255, 250, 255, 34%);
+    --mumyeongjangya-day-center-border: rgba(92, 62, 113, 18%);
+
+    /* Side panels stay transparent so the background art remains visible. */
+    .columns-area__panels__pane--navigational .columns-area__panels__pane__inner,
+    .columns-area__panels__pane--compositional .columns-area__panels__pane__inner,
+    .navigation-panel,
+    .compose-panel,
+    .ui__navigation-bar,
+    .drawer__inner {
+      -webkit-backdrop-filter: none !important;
+      backdrop-filter: none !important;
+      background: transparent !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      border-color: transparent !important;
+      box-shadow: none !important;
+    }
+
+    /* Navigation uses charcoal-plum instead of saturated purple over neon art. */
+    .navigation-panel,
+    .navigation-panel .column-link,
+    .navigation-panel__account-switch-link {
+      color: var(--mumyeongjangya-day-side-text) !important;
+      text-shadow: var(--mumyeongjangya-day-side-shadow);
+    }
+
+    .navigation-panel .column-link .icon,
+    .navigation-panel .column-link svg,
+    .navigation-panel__account-switch-link .icon,
+    .navigation-panel__account-switch-link svg {
+      color: var(--mumyeongjangya-day-side-icon) !important;
+      filter: drop-shadow(0 1px 6px rgba(255, 255, 255, 20%));
+    }
+
+    .navigation-panel .column-link:hover,
+    .navigation-panel .column-link:focus-visible,
+    .navigation-panel__account-switch-link:hover,
+    .navigation-panel__account-switch-link:focus-visible {
+      background-color: var(--mumyeongjangya-day-side-hover) !important;
+      color: var(--mumyeongjangya-day-side-accent) !important;
+    }
+
+    .navigation-panel .column-link.active {
+      background-color: var(--mumyeongjangya-day-side-active) !important;
+      color: var(--mumyeongjangya-day-side-accent) !important;
+    }
+
+    .navigation-panel .column-link.active .icon,
+    .navigation-panel .column-link.active svg,
+    .navigation-panel .column-link:hover .icon,
+    .navigation-panel .column-link:hover svg,
+    .navigation-panel .column-link:focus-visible .icon,
+    .navigation-panel .column-link:focus-visible svg {
+      color: var(--mumyeongjangya-day-side-accent) !important;
+    }
+
+    /* Compose-side account identity and helper labels get matching contrast. */
+    .compose-panel,
+    .compose-panel .navigation-bar,
+    .compose-panel .navigation-bar strong,
+    .compose-panel .display-name,
+    .compose-panel .display-name strong,
+    .compose-panel .account__display-name,
+    .compose-panel .account__display-name strong,
+    .compose-panel .reply-indicator__content {
+      color: var(--mumyeongjangya-day-side-text) !important;
+      text-shadow: var(--mumyeongjangya-day-side-shadow);
+    }
+
+    .compose-panel .display-name__account,
+    .compose-panel .account__display-name .display-name__account,
+    .compose-panel .navigation-bar .display-name__account,
+    .compose-panel .character-counter,
+    .compose-panel .autosuggest-textarea__textarea::placeholder,
+    .compose-panel .search__input::placeholder {
+      color: var(--mumyeongjangya-day-side-muted) !important;
+      opacity: 1;
+    }
+
+    /* Search and composer keep only a thin glass layer for legibility. */
+    .compose-panel .search,
+    .compose-panel .compose-form__highlightable {
+      -webkit-backdrop-filter: blur(10px) saturate(115%);
+      backdrop-filter: blur(10px) saturate(115%);
+      background-color: rgba(255, 255, 255, 24%) !important;
+      border: 1px solid rgba(92, 62, 113, 12%) !important;
+      box-shadow: 0 8px 24px rgba(61, 38, 78, 8%) !important;
+    }
+
+    .compose-panel .search.active,
+    .compose-panel .search:focus-within,
+    .compose-panel .compose-form__highlightable:focus-within {
+      background-color: rgba(255, 255, 255, 34%) !important;
+      border-color: rgba(106, 51, 130, 24%) !important;
+      box-shadow: 0 10px 28px rgba(61, 38, 78, 11%) !important;
+    }
+
+    /* Center column gets a quieter lilac glass treatment. */
+    .column > .scrollable,
+    .column-header {
+      -webkit-backdrop-filter: blur(20px) saturate(125%);
+      backdrop-filter: blur(20px) saturate(125%);
+      background-color: var(--mumyeongjangya-day-center-panel) !important;
+      border-color: var(--mumyeongjangya-day-center-border) !important;
+      box-shadow: 0 14px 40px rgba(73, 49, 91, 10%), inset 0 1px 0 rgba(255, 255, 255, 56%) !important;
+    }
+
+    .column-header {
+      background-color: var(--mumyeongjangya-day-center-panel-strong) !important;
+    }
+
+    .status,
+    .notification,
+    .conversation,
+    .account-card,
+    .link-footer,
+    .detailed-status,
+    .status__wrapper {
+      background-color: var(--mumyeongjangya-day-center-item) !important;
+      border-color: rgba(92, 62, 113, 10%) !important;
+    }
+
+    .status:hover,
+    .notification:hover,
+    .conversation:hover,
+    .account-card:hover,
+    .status__wrapper:hover {
+      background-color: var(--mumyeongjangya-day-center-item-hover) !important;
+    }
+  }
+}
