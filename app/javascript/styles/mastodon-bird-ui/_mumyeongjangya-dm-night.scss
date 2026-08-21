@@ -1,0 +1,116 @@
+/* Night-theme colour treatment for the @_longwhile DM chat UI.
+ *
+ * Keep the chat on the same violet/indigo glass palette as the rest of
+ * Mumyeongjangya Night while preserving strong text contrast in both sent and
+ * received bubbles. The `recieve` spelling is intentional: it matches the
+ * existing DM custom properties used by components.scss.
+ */
+
+body.theme-mumyeongjangya-night {
+  --mumyeongjangya-dm-panel: rgba(16, 6, 46, 68%);
+  --mumyeongjangya-dm-panel-strong: rgba(23, 7, 76, 86%);
+  --mumyeongjangya-dm-hover: rgba(174, 11, 241, 12%);
+  --mumyeongjangya-dm-active: rgba(112, 6, 236, 22%);
+  --mumyeongjangya-dm-border: rgba(172, 151, 211, 32%);
+  --mumyeongjangya-dm-shadow: 0 12px 34px rgba(6, 3, 18, 24%);
+
+  --color-recieve-message-background: rgba(39, 14, 82, 92%);
+  --color-recieve-message-text: #eee2f7;
+  --color-sent-message-background: #7006ec;
+  --color-sent-message-text: #ffffff;
+
+  .dm-shell__list,
+  .dm-shell__thread,
+  .dm-room,
+  .dm-room-list {
+    background: transparent;
+  }
+
+  .dm-room-header,
+  .dm-composer {
+    -webkit-backdrop-filter: blur(18px) saturate(145%);
+    backdrop-filter: blur(18px) saturate(145%);
+    background: var(--mumyeongjangya-dm-panel);
+    border-color: var(--mumyeongjangya-dm-border);
+  }
+
+  .dm-room-list__search,
+  .dm-composer__field {
+    background: var(--mumyeongjangya-dm-panel-strong);
+    border-color: var(--mumyeongjangya-dm-border);
+    box-shadow: inset 0 1px 0 var(--mumyeongjangya-glass-highlight);
+  }
+
+  .dm-room-list__search:focus-within,
+  .dm-composer__field:has(:focus-visible) {
+    border-color: var(--color-accent-dark-50);
+    box-shadow:
+      0 0 0 1px var(--color-accent-dark-50),
+      inset 0 1px 0 var(--mumyeongjangya-glass-highlight);
+  }
+
+  .dm-room-item:hover,
+  .dm-room-item:focus-visible {
+    background: var(--mumyeongjangya-dm-hover);
+  }
+
+  .dm-room-item--active,
+  .dm-room-item--active:hover,
+  .dm-room-item--active:focus-visible {
+    background: var(--mumyeongjangya-dm-active);
+  }
+
+  .dm-message__bubble {
+    border: 1px solid rgba(172, 151, 211, 20%);
+    box-shadow: 0 7px 18px rgba(6, 3, 18, 18%);
+  }
+
+  .dm-message__bubble--media-only {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .dm-message__bubble a {
+    color: inherit;
+  }
+
+  .dm-message--mine .dm-message__bubble {
+    border-color: rgba(214, 20, 246, 24%);
+    box-shadow: 0 8px 22px rgba(112, 6, 236, 20%);
+  }
+
+  .dm-message--mine .dm-message__bubble--media-only {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .dm-composer__send {
+    box-shadow: 0 6px 18px rgba(112, 6, 236, 28%);
+  }
+
+  .dm-room__to-bottom,
+  .dm-room__offline,
+  .dm-room__editing {
+    background: var(--mumyeongjangya-dm-panel-strong);
+    border-color: var(--mumyeongjangya-dm-border);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  body.theme-mumyeongjangya-night {
+    .dm-room-header,
+    .dm-composer {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      background: #10062e;
+    }
+
+    .dm-room-list__search,
+    .dm-composer__field,
+    .dm-room__to-bottom,
+    .dm-room__offline,
+    .dm-room__editing {
+      background: #17074c;
+    }
+  }
+}
