@@ -355,3 +355,66 @@ body.theme-mumyeongjangya-night .search__popout {
     background-color: var(--color-bg-90);
   }
 }
+
+/* Keep navigation, search, and compose chrome fully clear so the gradient can
+ * show through without hiding labels, icons, or focus states. */
+body.theme-mumyeongjangya-day,
+body.theme-mumyeongjangya-night {
+  .columns-area__panels__pane--navigational .columns-area__panels__pane__inner,
+  .columns-area__panels__pane--compositional .columns-area__panels__pane__inner,
+  .navigation-panel,
+  .drawer__inner,
+  .compose-panel,
+  .compose-form,
+  .compose-form__highlightable,
+  .ui__navigation-bar {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .column-link,
+  .column-link:hover,
+  .column-link:focus-visible,
+  .column-link.active,
+  .navigation-panel__account-switch-link,
+  .navigation-panel__compose-button,
+  .navigation-panel__compose-button:hover,
+  .navigation-panel__compose-button:focus-visible,
+  .ui__navigation-bar__item,
+  .ui__navigation-bar__item.active,
+  .ui__compose-fab,
+  .ui__compose-fab:hover,
+  .ui__compose-fab:focus-visible,
+  .search,
+  .search.active,
+  .search__input,
+  .search__input:focus,
+  .compose-form__highlightable,
+  .compose-form__highlightable:focus-within,
+  .compose-form__autosuggest-wrapper,
+  .compose-form__autosuggest-wrapper:focus-within,
+  .compose-form__buttons-wrapper,
+  .compose-form__modifiers,
+  .autosuggest-textarea__textarea,
+  .autosuggest-textarea__textarea:focus,
+  .spoiler-input__input,
+  .spoiler-input__input:focus {
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .navigation-panel__compose-button,
+  .navigation-panel__compose-button:hover,
+  .navigation-panel__compose-button:focus-visible,
+  .ui__compose-fab,
+  .ui__compose-fab:hover,
+  .ui__compose-fab:focus-visible {
+    color: var(--color-accent);
+  }
+}
